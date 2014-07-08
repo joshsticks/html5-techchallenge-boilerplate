@@ -8,9 +8,44 @@
         <link rel="stylesheet" href="css/screen.css">
     </head>
     <body>
+        <header>
+            <nav>
+                <ul>
+                    <li>SECTIONS</li>
+                    <li>SEARCH</li>
+                    <li>joshstickles...</li>
+                </ul>
+            </nav>
+            <hr />
+            <h1>CAPTECH.IO NEWS</h1>
+            <hr />
+            <nav>
+                <ul>
+                    <li>WORLD</li>
+                    <li>BUSINESS</li>
+                    <li>OPINION</li>
+                    <li>SPORTS</li>
+                    <li>FASHIONS &amp; STYLE</li>
+                    <li>VIDEO</li>
+                </ul>
+            </nav>
+        </header>
         <div id="content">
             <!-- This is where you will dynamically load content -->
         </div>
+        
+        <script id="page-template" type="text/template">
+            <aside>
+            <% for (var i = 0; i < this.model.get("aside").length; i++) { %>
+                <article>
+                    <%= this.model.get("aside")[i].headLine%>
+                </article>
+            <% } %>
+            </aside>
+            <section>
+            </section>
+        </script>
+        
         <script src="js/jquery-2.1.1.min.js"></script>
         <script src="js/underscore-min.js"></script>
         <script src="js/backbone-min.js"></script>
